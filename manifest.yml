@@ -1,0 +1,24 @@
+---
+instances: 1
+memory: 1024M
+applications:
+- name: data-binding-basic
+  random-route: true
+  path: basic/build/libs/basic.jar
+  services:
+  - teams-db
+- name: data-binding-auto
+  random-route: true
+  path: connectors-auto/build/libs/connectors-auto.jar
+  services:
+  - teams-db
+- name: data-binding-explicit
+  random-route: true
+  path: connectors-explicit/build/libs/connectors-explicit.jar
+  services:
+  - teams-db
+- name: data-binding-custom
+  random-route: true
+  path: connectors-custom/build/libs/connectors-custom.jar
+  services:
+  - teams-db

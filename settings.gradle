@@ -1,1 +1,5 @@
-include "in-memory"
+include "common"
+include "basic"
+include "connectors-auto"
+include "connectors-explicit"
+include "connectors-custom"
