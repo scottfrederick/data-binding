@@ -2,22 +2,25 @@
 instances: 1
 memory: 1024M
 applications:
-- name: data-binding-basic
+- name: medal-counts
+  random-route: true
+  path: basic/build/libs/basic.jar
+- name: medal-counts-basic
   random-route: true
   path: basic/build/libs/basic.jar
   services:
   - teams-db
-- name: data-binding-auto
+- name: medal-counts-auto
   random-route: true
   path: connectors-auto/build/libs/connectors-auto.jar
   services:
   - teams-db
-- name: data-binding-explicit
+- name: medal-counts-manual
   random-route: true
-  path: connectors-explicit/build/libs/connectors-explicit.jar
+  path: connectors-manual/build/libs/connectors-manual.jar
   services:
   - teams-db
-- name: data-binding-custom
+- name: medal-counts-custom
   random-route: true
   path: connectors-custom/build/libs/connectors-custom.jar
   services:
