@@ -13,7 +13,7 @@ import javax.sql.DataSource;
 public class DatabaseConfig extends AbstractCloudConfig {
 	@Bean
 	public DataSource dataSource() {
-		PooledServiceConnectorConfig.PoolConfig poolConfig = new PooledServiceConnectorConfig.PoolConfig(2, 4, 60000);
+		PooledServiceConnectorConfig.PoolConfig poolConfig = new PooledServiceConnectorConfig.PoolConfig(2, 10, 60000);
 		ConnectionConfig connectionConfig = new ConnectionConfig("useUnicode=yes;characterEncoding=UTF-8");
 		DataSourceConfig config = new DataSourceConfig(poolConfig, connectionConfig);
 		return connectionFactory().dataSource(config);
