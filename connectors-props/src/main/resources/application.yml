@@ -1,0 +1,9 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  cloud:
+    enabled: false
+  datasource:
+    url: ${cloud.services.mysql.connection.uri}
+    continue-on-error: true

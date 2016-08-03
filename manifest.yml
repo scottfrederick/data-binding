@@ -25,3 +25,8 @@ applications:
   path: connectors-custom/build/libs/connectors-custom.jar
   services:
   - teams-db
+- name: medal-counts-props
+  random-route: true
+  path: connectors-props/build/libs/connectors-props.jar
+  services:
+  - teams-db
